@@ -1,8 +1,9 @@
 .PHONY: all
 
 all:
-	git clone git@github.com:Utari-Room/client.git && cd client && yarn &
-	git clone git@github.com:Utari-Room/server.git && cd server && yarn &
-	git clone git@github.com:Utari-Room/common.git && cd common && yarn &
-	wait;\
-	echo "clone && yarn completed"
+	(trap 'kill 0' INT;
+		cd client && yarn &
+		cd server && yarn &
+		cd common && yarn &
+	wait;)\
+		echo "yarn completed"
