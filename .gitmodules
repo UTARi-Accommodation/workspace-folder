@@ -1,0 +1,12 @@
+[submodule "server"]
+	path = server
+	url = git@github.com:Utari-Room/server.git
+[submodule "client"]
+	path = client
+	url = git@github.com:Utari-Room/client.git
+[submodule "common"]
+	path = common
+	url = git@github.com:Utari-Room/common.git
+[submodule "diagram"]
+	path = diagram
+	url = git@github.com:Utari-Room/diagram.git
