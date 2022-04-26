@@ -1,4 +1,5 @@
 .PHONY: all
+MAKEFLAGS += --silent
 
 all:
 	(trap 'kill 0' INT;
