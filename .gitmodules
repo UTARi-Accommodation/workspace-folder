@@ -7,6 +7,3 @@
 [submodule "common"]
 	path = common
 	url = git@github.com:Utari-Room/common.git
-[submodule "diagram"]
-	path = diagram
-	url = git@github.com:Utari-Room/diagram.git
