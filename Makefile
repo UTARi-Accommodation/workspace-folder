@@ -1,10 +1,9 @@
 .PHONY: all
-MAKEFLAGS += --silent
 
 all:
-	(trap 'kill 0' INT;
-		cd client && yarn &
-		cd server && yarn &
-		cd common && yarn &
-	wait;)\
-		echo "yarn completed"
+	git clone git@github.com:Utari-Room/web.git && cd web && yarn &
+	git clone git@github.com:Utari-Room/server.git && cd server && yarn &
+	git clone git@github.com:Utari-Room/common.git && cd common && yarn &
+	git clone git@github.com:Utari-Room/desktop.git && cd desktop && yarn &
+	wait;\
+	echo "clone && yarn completed"
